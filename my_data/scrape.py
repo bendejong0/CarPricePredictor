@@ -53,8 +53,6 @@ def get_data(url: str):
         services = services_span['data-count'] if services_span else 'N/A'
 
         data.append([make, price, body_style, mileage, mpg2, services])
-        print(mpg2)
-        print(data[-1])
 
     df = pd.DataFrame(data, columns=['Make', 'Price', 'Body Style', 'Mileage', 'MPG', 'Services'])
     df.to_csv('car_data.csv', index=False)
